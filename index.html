@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="dist/css/base.min.css">
+    <link rel="stylesheet" href="dist/css/gallery.min.css">
+
+</head>
+<body>
+    <!--[if lte IE 9]><div style="text-align: center; background-color: #e51c23;" >本相册只兼容到IE9+,chrome,firefox, 请到<a href="http://rj.baidu.com/soft/detail/14744.html?ald">这里</a>下载最新版本的chrome浏览器获取最佳的浏览体验</div><![endif]-->
+    <h1 class="header">Gallery</h1>
+    <div id="mygallery" class="container">
+    </div>
+    <div id="ctrl-panel" class="ctrl-panel">
+        <h2>Control Panel(<span id="loading" class="loaded">loaded</span>)</h2>
+        <div id="pic">
+            <label>Image URL: <input id="imgUrl" type="text" placeholder="please input the your image url"></label>
+            <input id="randomAdd" type="button" value="add random image">
+            <input id="add" type="button" value="add">
+        </div>
+        <div id="layout">
+            <label><input type="radio" value="1" name="layout" checked>puzzle layout</label>
+            <label><input type="radio" value="2" name="layout">waterfall layout</label>
+            <label><input type="radio" value="3" name="layout">barrel layout</label>
+        </div>
+        <div id="gutter">
+            <label>gutterX: <input id="gutterX" type="number" min="0" max="30" value="10"></label>
+            <label>gutterY: <input id="gutterY" type="number" min="0" max="30" value="10"></label>
+        </div>
+        <div id="waterfallColumns">
+            <label>columns: <input id="columns" type="number" min="1" max="10" value="4"></label>
+        </div>
+        <div id="barrelHeight">
+            <label title="barrel row min height">minHeight: <input id="minHeight" type="number" min="50" max="500" value="200"></label>
+            <label title="barrel row max height">maxHeight: <input id="maxHeight" type="number" min="50" max="500" value="300"></label>
+        </div>
+        <div id="barrelCnt">
+            <label title="image min counts per row">minCnt: <input id="minCnt" type="number" min="1" max="5" value="3"></label>
+            <label title="image max counts per row">maxCnt: <input id="maxCnt" type="number" min="5" max="10" value="6"></label>
+        </div>
+    </div>
+<!--     <script type="text/javascript" src="src/scripts/gallery.js"></script>
+    <script type="text/javascript" src="src/scripts/index.js"></script> -->
+    <script type="text/javascript" src="dist/js/gallery.min.js"></script>
+    <script type="text/javascript" src="dist/js/index.min.js"></script>
+</body>
+</html>
