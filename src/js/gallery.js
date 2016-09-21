@@ -61,8 +61,8 @@
         _gutter = [10, 10];
 
     var _puzzleSettings = {
-        conWidth: _container.clientWidth,
-        conHeight: _container.clientWidth / 2
+        conWidth: 0,
+        conHeight: 0
     };
     var _waterfallSettings = {
         colCnt: 4
@@ -155,10 +155,14 @@
     function _resetPuzzle () {
         _resetContainer();
 
-        _container.style.width = _puzzleSettings.conWidth + 'px';
+        _conWidth = _container.clientWidth;
+        
+        _puzzleSettings.conWidth = _container.clientWidth;
+        _puzzleSettings.conHeight = _container.clientHeight || _container.clientWidth / 2;
+
+        _container.style.width = _container.clientWidth + 'px';
         _container.style.height = _puzzleSettings.conHeight + 'px';
 
-        _conWidth = _container.clientWidth;
         _lastIndex = -1;
 
         _addPuzzleItem();
@@ -585,7 +589,10 @@
             this.setLayout(option.layout);  
         } 
         if (option.gutter) {
-            this.setGutter(option.gutter);
+            this.setGutter(option.gutter.x, option.gutter.y);
+        }
+        if (option.fullscreen === true || option.fullscreen === false) {
+            _isFullscreen = option.fullscreen;
         } 
 
         if (!isNaN(option.conWidth)) {
