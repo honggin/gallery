@@ -28,26 +28,14 @@
 
     var OPERATION = {
         ADD: {
-            1: function () {
-                _addPuzzleItem();
-            },
-            2: function () {
-                _addWaterfallItem();
-            },
-            3: function () {
-                _addBarrelItem();
-            }
+            1: _addPuzzleItem,
+            2: _addWaterfallItem,
+            3: _addBarrelItem
         },
         RESET: {
-            1: function () {
-                _resetPuzzle();
-            },
-            2: function () {
-                _resetWaterfall();
-            },
-            3: function () {
-                _resetBarrel();
-            }   
+            1: _resetPuzzle,
+            2: _resetWaterfall,
+            3: _resetBarrel   
         }
     };
 

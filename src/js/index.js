@@ -132,7 +132,7 @@ window.onload = function () {
         var width = Math.floor(Math.random() * 300) + 500;
         var height = Math.floor(Math.random() * 300) + 250;
 
-        return 'https://unsplash.it/'+width+'/'+height;
+        return 'http://placekitten.com/'+width+'/'+height;
     }
 
     function $ (id) {
